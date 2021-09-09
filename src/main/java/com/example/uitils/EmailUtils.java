@@ -77,7 +77,7 @@ public class EmailUtils {
 			//3.3生成邮件主题
 			message.setSubject("小黑社区账号激活邮件","utf-8");
 			String ip = Inet4Address.getLocalHost().getHostAddress();
-			String url = "http://"+ip+":8088/jihuo&c="+Base64Utils.encode(user.getCode());
+			String url = "http://"+ip+":80/jihuo&c="+Base64Utils.encode(user.getCode());
 			//设置邮件正文 setContent 可以使用html标签
 			message.setContent(user.getName()+",你好<br>欢迎注册小黑社区! 请点击链接进行激活:<a href='"+url+"'>点击此处</a>","text/html;charset=utf-8");
 			//设置邮件的发送时间 是立即发送
