@@ -100,7 +100,7 @@ public class IndexController {
         String b="http://pic.uuhy.com/uploads/2012/06/26/emma-watson-celebrity.jpg";
         String c="http://pic.uuhy.com/uploads/2012/06/26/emma-watson-actress.jpg";
         String d="http://pic.uuhy.com/uploads/2012/06/26/actress-emma-watson.jpg";
-        String  s[]=new  String[2];
+        String  s[]=new  String[]{b,c,d};
         Random random=new Random();
         Integer  f= random.nextInt(3);
         user.setAvatarUrl(s[f]);
