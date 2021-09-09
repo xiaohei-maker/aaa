@@ -25,8 +25,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-import static java.lang.Math.*;
-
 @Controller
 public class IndexController {
 
@@ -114,7 +112,8 @@ public class IndexController {
             return "error";
         }else {
             //session.setAttribute("userall",user);
-            response.addCookie(new Cookie("token",token));
+            session.setAttribute("token",token);
+            //response.addCookie(new Cookie("token",token));
             return "registerSuccess";
         }
     }
@@ -126,22 +125,30 @@ public class IndexController {
                           HttpServletRequest request,
                           HttpServletResponse response) throws SQLException {
         //String codes=request.getParameter("c");
+        HttpSession session=request.getSession();
         String c= Base64Utils.decode(code);
         //String c= String.valueOf(Base64Utils.decodeFromString(request.getParameter("c")));
         Integer i=userService.selectCode(c);
         if(i==0){
             request.setAttribute("msg","激活失败！");
             // return Constants.FORWARD+"/message.jsp";
+            //return  "message";
         }else if(i==1){
+            String token= (String) session.getAttribute("token");
+            response.addCookie(new Cookie("token",token));
             request.setAttribute("msg","激活成功！");
+            //return   "message";
             // return Constants.FORWARD+"/message.jsp";
         }else {
             request.setAttribute("msg","已经激活！");
+            //return   "message";
             // return Constants.FORWARD+"/message.jsp";
         }
         //3.响应
+        return  "message";
         //request.getParameter("registerMsg")
-        return "denglu";
+        //return   "message";
+        //return "denglu";
     }
 
     //登录功能

@@ -129,26 +129,25 @@
         }
     }
 </script>
-
 <div class="regist">
     <div class="regist_center" style="width: 870px;margin: 35px auto;" >
         <div class="regist_top">
             <div class="left fl"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;注册</div>
-<!--            <div class="right fr">-->
-<!--                <a href="index.jsp" target="_black">小米商城</a>-->
-<!--            </div>-->
+            <!--            <div class="right fr">-->
+            <!--                <a href="index.jsp" target="_black">小米商城</a>-->
+            <!--            </div>-->
             <div class="clear"></div>
             <div class="xian center"></div>
         </div>
         <div class="center-block" style="margin-top: 80px;">
             <form class="form-horizontal" action="/zhu" method="post">
-<!--                class="pics"-->
+                <!--                class="pics"-->
                 <div class="form-group">
                     <label class="col-sm-2 control-label">选择头像</label>
-<!--                    style="margin-left: 5px;position: relative"-->
+                    <!--                    style="margin-left: 5px;position: relative"-->
                     <div  class="col-sm-8" >
                         <input type="file" id="imgSelect" name="file">
-<!--                                <img id="previewImg" src="/static/images/default.jpg" alt="点击上传图片" title="点击上传图片">-->
+                        <!--                                <img id="previewImg" src="/static/images/default.jpg" alt="点击上传图片" title="点击上传图片">-->
                     </div>
                 </div>
 
@@ -168,7 +167,7 @@
                         <input type="password" name="upassword1" class="form-control col-sm-10" placeholder="Password" id="password1"/>
                     </div>
                     <div class="col-sm-2">
-<!--                        <span id="helpBlock1" class="help-block ">请不输入6位以上字符</span>-->
+                        <!--                        <span id="helpBlock1" class="help-block ">请不输入6位以上字符</span>-->
                         <p class="text-danger"><span id="helpBlock1" class="help-block ">请输入6位以下</span></p>
                     </div>
                 </div>
@@ -211,23 +210,23 @@
                 <div class="form-group">
                     <div class="col-sm-7 col-sm-push-2">
                         <input id="registerBtn" type="submit" value="注册" class="btn btn-primary  btn-lg" style="width: 200px;" /> &nbsp; &nbsp;
-<!--                        <input type="reset" value="重置" class="btn btn-default  btn-lg" style="width: 200px;"  />-->
-<!--                        <input type="reset" value="重置" class="btn btn-default  btn-lg" style="width: 200px;"  />-->
-<!--                        <img src="https://z0.sinaimg.cn/auto/resize?img=http%3A%2F%2Fn.sinaimg.cn%2Fsinakd10121%2F480%2Fw640h640%2F20200310%2F2bcc-iqrhckn1642089.jpg&size=100_100"/>-->
+                        <!--                        <input type="reset" value="重置" class="btn btn-default  btn-lg" style="width: 200px;"  />-->
+                        <!--                        <input type="reset" value="重置" class="btn btn-default  btn-lg" style="width: 200px;"  />-->
+                        <!--                        <img src="https://z0.sinaimg.cn/auto/resize?img=http%3A%2F%2Fn.sinaimg.cn%2Fsinakd10121%2F480%2Fw640h640%2F20200310%2F2bcc-iqrhckn1642089.jpg&size=100_100"/>-->
 
                     </div>
                 </div>
 
-<!--                <div class="r-topbar-end">-->
-<!--                    <div class="r-icon-flex-list">-->
-<!--                        <div class="r-icon-flex-list-tit">其他注册方式 &gt;&gt;</div>-->
-<!--                        <div class="r-icon-flex-con">-->
-<!--                            <a hotrep="register.switchType.qq" href="javascript:;" title="QQ" data-type="qq" class="J-changeType"><i class="r-icon-qq"></i></a>-->
-<!--                            <a hotrep="register.switchType.mail" href="javascript:;" title="邮箱" data-type="mail" class="J-changeType"><i class="r-icon-mail"></i></a>-->
-<!--                            <a hotrep="register.switchType.wechatoa" href="javascript:;" title="小程序公众号" data-type="wechatoa" class="J-changeType"><i class="r-icon-oa"></i></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="r-topbar-end">-->
+                <!--                    <div class="r-icon-flex-list">-->
+                <!--                        <div class="r-icon-flex-list-tit">其他注册方式 &gt;&gt;</div>-->
+                <!--                        <div class="r-icon-flex-con">-->
+                <!--                            <a hotrep="register.switchType.qq" href="javascript:;" title="QQ" data-type="qq" class="J-changeType"><i class="r-icon-qq"></i></a>-->
+                <!--                            <a hotrep="register.switchType.mail" href="javascript:;" title="邮箱" data-type="mail" class="J-changeType"><i class="r-icon-mail"></i></a>-->
+                <!--                            <a hotrep="register.switchType.wechatoa" href="javascript:;" title="小程序公众号" data-type="wechatoa" class="J-changeType"><i class="r-icon-oa"></i></a>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
 
                 <div class="r-wrap J-wxArea">
                     <div class="r-content">
@@ -236,8 +235,8 @@
                             <div class="r-icon-list">
                                 <a  th:href="@{https://github.com/login/oauth/authorize(client_id='a65503a4e5242623c038',
                                 redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}" data-type="qq" class="J-changeType"><i class="r-icon-qq"></i><span>GitHub</span></a>
-<!--                                <a hotrep="register.switchType.mail" href="javascript:;" data-type="mail" class="J-changeType"><i class="r-icon-mail"></i><span>邮箱</span></a>-->
-<!--                                <a hotrep="register.switchType.wechatoa" href="javascript:;" data-type="wechatoa" class="J-changeType"><i class="r-icon-oa"></i><span>小程序公众号</span></a>-->
+                                <!--                                <a hotrep="register.switchType.mail" href="javascript:;" data-type="mail" class="J-changeType"><i class="r-icon-mail"></i><span>邮箱</span></a>-->
+                                <!--                                <a hotrep="register.switchType.wechatoa" href="javascript:;" data-type="wechatoa" class="J-changeType"><i class="r-icon-oa"></i><span>小程序公众号</span></a>-->
                             </div>
                         </div>
 

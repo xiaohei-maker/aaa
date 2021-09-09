@@ -2,7 +2,6 @@ package com.example.uitils;
 
 
 import com.example.demo.Model.User;
-
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -39,7 +38,7 @@ public class EmailUtils {
 		Session session = Session.getDefaultInstance(prop);
 		//设置debug模式 可以查看详细发送信息 可略
 		session.setDebug(true);
-		
+
 		//2.创建方法 用来组成一封完整的邮件
 		//参数 session(参数配置), myAccount 发送方 , user.getEmail() 接收方
 		MimeMessage message = createMsg(session,myAccount,user);
@@ -58,7 +57,7 @@ public class EmailUtils {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	private static MimeMessage createMsg(Session session, String myAccount, User user) {
@@ -76,12 +75,11 @@ public class EmailUtils {
 			 * */
 			message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(user.getEmail(), user.getName(), "utf-8"));
 			//3.3生成邮件主题
-			message.setSubject("MyShop商城账号激活邮件","utf-8");
+			message.setSubject("小黑社区账号激活邮件","utf-8");
 			String ip = Inet4Address.getLocalHost().getHostAddress();
-			//String codess= String.valueOf(user.getCode());
-			String url = "http://"+ip+":8088/jihuo&c="+ Base64Utils.encode(user.getCode());
+			String url = "http://"+ip+":8088/jihuo&c="+Base64Utils.encode(user.getCode());
 			//设置邮件正文 setContent 可以使用html标签
-			message.setContent(user.getName()+",你好<br>欢迎注册myshop商城! 请点击链接进行激活:<a href='"+url+"'>点击此处</a>","text/html;charset=utf-8");
+			message.setContent(user.getName()+",你好<br>欢迎注册小黑社区! 请点击链接进行激活:<a href='"+url+"'>点击此处</a>","text/html;charset=utf-8");
 			//设置邮件的发送时间 是立即发送
 			message.setSentDate(new Date());
 			//保存设置
