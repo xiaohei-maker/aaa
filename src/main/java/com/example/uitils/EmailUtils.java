@@ -77,8 +77,9 @@ public class EmailUtils {
 			//3.3生成邮件主题
 			message.setSubject("小黑社区账号激活邮件","utf-8");
 			//String ip = Inet4Address.getLocalHost().getHostAddress();
+			String url = "http://localhost:80/jihuo&c="+Base64Utils.encode(user.getCode());
 			//String url = "http://"+ip+":80/jihuo&c="+Base64Utils.encode(user.getCode());
-			String url = "http://10.0.4.15:80/jihuo&c="+Base64Utils.encode(user.getCode());
+			//String url = "http://10.0.4.15:80/jihuo&c="+Base64Utils.encode(user.getCode());
 			//10.0.4.15
 			//设置邮件正文 setContent 可以使用html标签
 			message.setContent(user.getName()+",你好<br>欢迎注册小黑社区! 请点击链接进行激活:<a href='"+url+"'>点击此处</a>","text/html;charset=utf-8");
@@ -86,13 +87,11 @@ public class EmailUtils {
 			message.setSentDate(new Date());
 			//保存设置
 			message.saveChanges();
-		} catch (Exception e) {
+		}  		catch (UnsupportedEncodingException | MessagingException | UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return message;
-// 		catch (UnsupportedEncodingException | MessagingException | UnknownHostException e) {
-// 			// TODO Auto-generated catch block
-// 			e.printStackTrace();
+
 	}
 }
