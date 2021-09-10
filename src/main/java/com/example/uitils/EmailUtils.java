@@ -86,10 +86,13 @@ public class EmailUtils {
 			message.setSentDate(new Date());
 			//保存设置
 			message.saveChanges();
-		} catch (UnsupportedEncodingException | MessagingException | UnknownHostException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return message;
+// 		catch (UnsupportedEncodingException | MessagingException | UnknownHostException e) {
+// 			// TODO Auto-generated catch block
+// 			e.printStackTrace();
 	}
 }
