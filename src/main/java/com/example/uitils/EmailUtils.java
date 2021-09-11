@@ -79,7 +79,7 @@ public class EmailUtils {
 			//String ip = Inet4Address.getLocalHost().getHostAddress();
 			//String url = "http://localhost:80/jihuo&c="+Base64Utils.encode(user.getCode());
 			String ip = Inet4Address.getLocalHost().getHostAddress();
-			String  ipp="110.42.132.132";
+			String  ipp="freecommunity.link";
 			String url = "http://"+ipp+":80/jihuo&c="+Base64Utils.encode(user.getCode());
 			//String url = "http://10.0.4.15:80/jihuo&c="+Base64Utils.encode(user.getCode());
 			//10.0.4.15
