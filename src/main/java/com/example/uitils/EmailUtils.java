@@ -76,9 +76,11 @@ public class EmailUtils {
 			message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(user.getEmail(), user.getName(), "utf-8"));
 			//3.3生成邮件主题
 			message.setSubject("小黑社区账号激活邮件","utf-8");
-			String ip = Inet4Address.getLocalHost().getHostAddress();
+			//String ip = Inet4Address.getLocalHost().getHostAddress();
 			//String url = "http://localhost:80/jihuo&c="+Base64Utils.encode(user.getCode());
-			String url = "http://"+ip+":80/jihuo&c="+Base64Utils.encode(user.getCode());
+			String ip = Inet4Address.getLocalHost().getHostAddress();
+			String  ipp="110.42.132.132";
+			String url = "http://"+ipp+":80/jihuo&c="+Base64Utils.encode(user.getCode());
 			//String url = "http://10.0.4.15:80/jihuo&c="+Base64Utils.encode(user.getCode());
 			//10.0.4.15
 			//设置邮件正文 setContent 可以使用html标签
